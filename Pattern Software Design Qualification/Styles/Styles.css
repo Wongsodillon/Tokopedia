@@ -1,0 +1,14 @@
+﻿:root {
+    --primary: #03ac0e;
+}
+.btn-primary:hover {
+    background-color: var(--primary);
+}
+.btn-primary:active {
+    background-color: var(--primary);
+    opacity: 0.8;
+}
+.btn-primary {
+    background-color: var(--primary);
+    border: var(--primary);
+}

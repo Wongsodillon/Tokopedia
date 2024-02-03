@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="501767500eaf488390418d8a06d38620" Name="Diagram1">
+        <EntityTypeShape EntityType="DatabaseModel.Product" Width="1.5" PointX="6.875" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Shop" Width="1.5" PointX="6.875" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Transaction" Width="1.5" PointX="0.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.User" Width="1.5" PointX="0.5" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Cart" Width="1.5" PointX="3.875" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.TransactionDetail" Width="1.5" PointX="6.875" PointY="9.625" IsExpanded="true" />
+        <AssociationConnector Association="DatabaseModel.FK_ProductID_InCart" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_ProductlD_ToDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_ShopID_InProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_UserID_InShop" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_TransactionID_InDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_UserID_InTransaction" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_UserID_InCart" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

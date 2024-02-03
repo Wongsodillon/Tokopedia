@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="Pattern_Software_Design_Qualification.Layouts.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>TokoJedia</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .form-control:focus {
+            outline:none;
+        }
+        .profile-pic {
+            max-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+            <asp:Image ID="Logo" runat="server" ImageUrl="~/Assets/logo.svg" CssClass="navbar-brand"/>
+            <div class="d-flex gap-4 collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-lg-0">
+                    <li class="nav-item">
+                        <asp:Button ID="HomeButton" runat="server" Text="Home" CssClass="nav-link" OnClick="HomeButton_Click"/>
+                    </li>
+                    <li class="nav-item">
+                        <asp:Button ID="CartButton" runat="server" Text="MyCart" CssClass="nav-link" OnClick="CartButton_Click"/>
+                    </li>
+                    <li class="nav-item">
+                        <asp:Button ID="HistoryButton" runat="server" Text="TransactionHistory" CssClass="nav-link" OnClick="HistoryButton_Click"/>
+                    </li>
+                    <li class="nav-item">
+                        <asp:Button ID="ProfileButton" runat="server" Text="Profile" CssClass="nav-link" OnClick="ProfileButton_Click"/>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <asp:TextBox ID="SearchField" runat="server" CssClass="form-control"></asp:TextBox>
+                    <div class="input-group-append">
+                        <asp:Button ID="SearchButton" runat="server" Text="Search" CssClass="btn btn-outline-success" OnClick="SearchButton_Click"/>  
+                    </div>
+                </form>
+            </div>
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
